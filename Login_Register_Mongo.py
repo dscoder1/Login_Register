@@ -5,10 +5,7 @@ from tkinter import ttk
 import pymongo
 import datetime
 import time
-client=pymongo.MongoClient("mongodb://localhost:27017/") 
-print(client)
-db=client["PythonPart2"]
-coll=db["Login_Register"]
+# Database Setup
 Login=Tk()
 Login.geometry("1500x750+10+10")
 Login.title("Registration Page")
@@ -178,4 +175,5 @@ Submit=Button(LblFrame,text="Submit",font=("Calibri",20,"bold"),command=submit,b
 Submit.place(x=200,y=480,height=50,width=130)
 login=Button(LblFrame,text="Login ?",font=("Calibri",17,"bold"),bg="sky blue",fg="blue",bd=0,command=loginpage)
 login.place(x=230,y=550,height=30,width=70)
+
 Login.mainloop()
